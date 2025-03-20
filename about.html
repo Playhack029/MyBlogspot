@@ -1,88 +1,114 @@
-<html>
+<!DOCTYPE html>
+<html lang="id">
 <head>
-	<style>
-		body, td{
-		  background-color: blak;
-			font-size: 10px;
-		}
-		h1{
-			color: #f79d06;
-		}
-		h2{
-			color: #FFF;
-			font-size: 30px;
-			margin: 0px;
-		}
-		.header{
-			background:#f79d06; padding: 10px;
-		}
-		a{
-			text-decoration: none;
-			color: #066;
-		}
-		a:visit{
-			color: #066;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #1e1e1e;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            background: #f79d06;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .header h2 {
+            color: white;
+            font-size: 28px;
+        }
+
+        .about-container {
+            background: #2c2c2c;
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-title {
+            text-align: center;
+            color: #f79d06;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .about-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-title {
+            color: #bbb;
+        }
+
+        .info-value {
+            font-weight: bold;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-<div class="header">
-    <h2 style="color: #FFF;">About Website</h2>
-</div>
-<table width="100%" style="border: 0px solid black; border-collapse: collapse;">
-	<tr>
-		<td style="background:#FFF; text-align: center; padding-top: 10px; padding-left: 10px; padding-right: 10px;">
-			<table width="100%" style="border: 0px solid black; border-collapse: collapse;">
-				<tr>
-					<td style="text-align: center; color: #0A0;" colspan="2">
-						<b><h1>About</h1></b>
-					</td>
-				</tr>
-				<tr>
-					<td style="width: 40%;">
-						Website Version
-					</td>
-					<td style="width: 60%;">
-						: V1.0
-					</td>
-				</tr>
-				<tr>
-					<td style="width: 40%;">
-						release time and date
-					</td>
-					<td style="width: 60%;">
-						: 19-06-2024 / 20:26
-					</td>
-				</tr>
-				<tr>
-					<td style="width: 40%;">
-						website of the country
-					</td>
-					<td style="width: 40%;">
-						: Indonesia
-					</td>
-				</tr>
-				<tr>
-					<td style="width: 40%;">
-						Created Using
-					</td>
-					<td style="width: 60%;">
-						: Acode App
-					</td>
-				</tr>
-				<tr>
-					<td style="width: 40%;">
-						name of the website owner
-					</td>
-					<td style="width: 40%;">
-						: Muhammad Rasyid Ridho
-					</td>
-				</tr>
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-</table>
+
+    <div class="header">
+        <h2>About Website</h2>
+    </div>
+
+    <div class="about-container">
+        <div class="about-title">About</div>
+        <div class="about-info">
+            <div class="info-item">
+                <span class="info-title">Website Version</span>
+                <span class="info-value">V1.0</span>
+            </div>
+            <div class="info-item">
+                <span class="info-title">Release Date & Time</span>
+                <span class="info-value">19-06-2024 / 20:26</span>
+            </div>
+            <div class="info-item">
+                <span class="info-title">Country</span>
+                <span class="info-value">Indonesia</span>
+            </div>
+            <div class="info-item">
+                <span class="info-title">Created Using</span>
+                <span class="info-value">Acode App</span>
+            </div>
+            <div class="info-item">
+                <span class="info-title">Website Owner</span>
+                <span class="info-value">Muhammad Rasyid Ridho</span>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

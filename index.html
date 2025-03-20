@@ -6,6 +6,7 @@
 		  background-color: #393939;
 			font-size: 10px;
 			-webkit-user-select: none;
+			text-align: center;
 		}
 		h1 {
 			color: #fa7608;
@@ -20,38 +21,41 @@
 		}
 		.content {
 			background: #282828; padding: 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 		.list {
-		  color: white;
+			color: white;
 			width: 100%;
-			overflow: hidden;
-		}
-		.judul-lain {
-			text-align: right;
-		}
-		.judul-utama {
-			float: left;
+			max-width: 500px; /* Batas maksimal agar tidak terlalu melebar */
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 10px;
+			background: #1e1e1e;
+			margin: 10px 0;
+			border-radius: 10px;
 		}
 		.list img {
-			width: 20%;
-			float: left;
+			width: 60px; /* Ukuran gambar lebih besar */
+			height: 60px;
+			margin-right: 10px;
 		}
 		.list .list-detail {
-			width: 70%;
-			float: left;
-			margin-left: 10px;
+			text-align: left;
+			flex: 1;
 		}
 		.list .list-detail a {
 			color: #f6b13eff;
 			text-decoration: none;
 			font-weight: bold;
+			display: block;
+			font-size: 14px;
 		}
-		.clear {
-			clear: both;
-			margin-bottom: 10px;
-		}
-		td {
-			font-size: 20px;
+		.list .list-detail b {
+			font-size: 12px;
+			display: block;
 		}
 		a {
 			text-decoration: none;
@@ -71,45 +75,36 @@
 	</div>
 </div>
 <div class="content">
-	<div style="width: 100%; text-align: center;">
-		<h1>Home</h1>
+	<h1>Home</h1>
+	
+	<div class="list">
+		<img src="fb.png" />
+		<div class="list-detail">
+			<a href="https://www.facebook.com/profile.php?id=100076502277460">FOLLOW</a>
+			<b>Follow Me On Facebook</b>
+		</div>
 	</div>
-	<div>
-	  <div>
-		  <div class="judul-utama"><b style="color: #FFF;">Follow Me</b></div>
-		  <div class="judul-lain"><b style="color: #FFF;">Thank You</b></div>
+
+	<div class="list">
+		<img src="yt.png" />
+		<div class="list-detail">
+			<a href="https://m.youtube.com/@playhack7881">SUBSCRIBE</a>
+			<b>Subscribe To My Youtube Channel</b>
 		</div>
-		<hr>
-		<div class="list">
-			<img src="fb.png" />
-			<div class="list-detail">
-				<a href="https://www.facebook.com/profile.php?id=100076502277460">FOLLOW</a>
-				<br>
-				<b>Follow Me On Facebook</b>
-			</div>
+	</div>
+
+    <div class="list">
+		<img src="ig.png" />
+		<div class="list-detail">
+			<a href="https://www.instagram.com/m.r.ridho029_/">FOLLOW</a>
+			<b>Follow Me On Instagram</b>
 		</div>
-		<div class="clear"></div>
-		<div class="list">
-			<img src="yt.png" />
-			<div class="list-detail">
-				<a href="https://m.youtube.com/@playhack7881">SUBSCRIBE</a>
-				<br>
-				<b>Subscribe To My Youtube Channel</b>
-			</div>
-		</div>
-		<div class="clear"></div>
-    	<div class="list">
-			<img src="ig.png" />
-			<div class="list-detail">
-				<a href="https://www.instagram.com/m.r.ridho029_/">FOLLOW</a>
-				<br>
-				<b>Follow Me On Instagram</b>
-			</div>
-		</div>
-		<div class="clear"></div>
-		<center>
-			<br><br><br>
-			Edo Website - 2024
-		</center>
+	</div>
+
+	<center>
+		<br><br>
+		Edo Website - 2024
+	</center>
+</div>
 </body>
 </html>

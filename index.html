@@ -1,116 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-	<style>
-		body {
-		  background-color: #393939;
-			font-size: 10px;
-			-webkit-user-select: none;
-			text-align: center;
-		}
-		h1 {
-			color: #fa7608;
-		}
-		h2 {
-			color: grey;
-			font-size: 30px;
-			margin: 0px;
-		}
-		.header {
-			background: #f79d06; padding: 10px;
-		}
-		.content {
-    background: #282828; 
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.list {
-    color: white;
-    width: 90%; /* Biar responsif */
-    max-width: 700px; /* Biar lebih besar */
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 15px;
-    background: #1e1e1e;
-    margin: 10px 0;
-    border-radius: 10px;
-}
-
-.list img {
-    width: 70px; /* Gambar lebih besar */
-    height: 70px;
-    margin-right: 15px;
-}
-
-.list .list-detail {
-    text-align: left;
-    flex: 1;
-}
-		}
-		.list .list-detail a {
-			color: #f6b13eff;
-			text-decoration: none;
-			font-weight: bold;
-			display: block;
-			font-size: 14px;
-		}
-		.list .list-detail b {
-			font-size: 12px;
-			display: block;
-		}
-		a {
-			text-decoration: none;
-			color: red;
-		}
-		a:visited {
-			color: blue;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edo Blogspot</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="header">
-	<h2 style="color: #FFF;">Edo Blogspot</h2>
-	<font color="#FFF" size="2">Don't contact me if it's not important</font>
-	<div style="background:#DDD; padding: 10px; margin-top: 10px;">
-		<a href="about.html">About</a>
-	</div>
-</div>
-<div class="content">
-	<h1>Home</h1>
-	
-	<div class="list">
-		<img src="fb.png" />
-		<div class="list-detail">
-			<a href="https://www.facebook.com/profile.php?id=100076502277460">FOLLOW</a>
-			<b>Follow Me On Facebook</b>
-		</div>
-	</div>
+    <header>
+        <h1>Edo Blogspot</h1>
+        <p>Don't contact me if it's not important</p>
+        <nav>
+            <a href="#">About</a>
+        </nav>
+    </header>
 
-	<div class="list">
-		<img src="yt.png" />
-		<div class="list-detail">
-			<a href="https://m.youtube.com/@playhack7881">SUBSCRIBE</a>
-			<b>Subscribe To My Youtube Channel</b>
-		</div>
-	</div>
+    <main>
+        <h2>Home</h2>
+        <div class="social-links">
+            <a href="#" class="social-card">
+                <img src="facebook.png" alt="Facebook">
+                <div class="text">
+                    <strong>FOLLOW</strong>
+                    <p>Follow Me On Facebook</p>
+                </div>
+            </a>
+            <a href="#" class="social-card">
+                <img src="youtube.png" alt="YouTube">
+                <div class="text">
+                    <strong>SUBSCRIBE</strong>
+                    <p>Subscribe To My Youtube Channel</p>
+                </div>
+            </a>
+            <a href="#" class="social-card">
+                <img src="instagram.png" alt="Instagram">
+                <div class="text">
+                    <strong>FOLLOW</strong>
+                    <p>Follow Me On Instagram</p>
+                </div>
+            </a>
+        </div>
+    </main>
 
-    <div class="list">
-		<img src="ig.png" />
-		<div class="list-detail">
-			<a href="https://www.instagram.com/m.r.ridho029_/">FOLLOW</a>
-			<b>Follow Me On Instagram</b>
-		</div>
-	</div>
-
-	<center>
-		<br><br>
-		Edo Website - 2024
-	</center>
-</div>
+    <footer>
+        <p>Edo Website - 2024</p>
+    </footer>
 </body>
 </html>

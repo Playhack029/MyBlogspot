@@ -28,11 +28,11 @@
             margin-bottom: 5px;
         }
 
-        /* Tombol menu */
+        /* Tombol Floating Menu */
         .menu-button {
             position: absolute;
             top: 10px;
-            left: 15px; /* Pindah ke kiri */
+            left: 15px;
             background: none;
             border: none;
             font-size: 24px;
@@ -44,7 +44,7 @@
         .floating-menu {
             position: fixed;
             top: 0;
-            left: -250px; /* Pindah ke kiri */
+            left: -250px;
             width: 200px;
             height: 100vh;
             background: #333;
@@ -64,6 +64,8 @@
             text-decoration: none;
             border-radius: 5px;
             margin-bottom: 10px;
+            text-align: center;
+            font-weight: bold;
         }
 
         .close-menu {
@@ -74,6 +76,8 @@
             cursor: pointer;
             margin-bottom: 15px;
             border-radius: 5px;
+            width: 100%;
+            text-align: center;
         }
 
         main {
@@ -135,12 +139,13 @@
     <!-- Floating Menu -->
     <div class="floating-menu" id="floatingMenu">
         <button class="close-menu" onclick="toggleMenu()">Tutup</button>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Info Web</a>
+        <a href="#">Web Lainnya</a>
     </div>
 
     <main>
-        <h2>Home</h2>
+        <h2>Beranda</h2>
         <div class="social-links">
             <a href="https://www.facebook.com/profile.php?id=100089499709076" class="social-card">
                 <img src="fb.png" alt="Facebook">
@@ -153,7 +158,7 @@
                 <img src="yt.png" alt="YouTube">
                 <div class="text">
                     <strong>SUBSCRIBE</strong>
-                    <p>Subscribe To My Youtube Channel</p>
+                    <p>Subscribe To My YouTube Channel</p>
                 </div>
             </a>
             <a href="https://www.instagram.com/calon_senshu?igsh=OWlvNHZqbGVuN2dz" class="social-card">
@@ -172,12 +177,8 @@
 
     <script>
         function toggleMenu() {
-            var menu = document.getElementById("floatingMenu");
-            if (menu.classList.contains("active")) {
-                menu.classList.remove("active");
-            } else {
-                menu.classList.add("active");
-            }
+            let menu = document.getElementById("floatingMenu");
+            menu.classList.toggle("active");
         }
     </script>
 

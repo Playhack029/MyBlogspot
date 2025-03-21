@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jam Digital</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+
+        .clock-container {
+            background: #222;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+        }
+
+        .clock {
+            font-size: 60px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.8);
+        }
+
+        .date {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #bbb;
+        }
+
+        /* Animasi efek glowing */
+        @keyframes glow {
+            0% { text-shadow: 0px 0px 10px cyan; }
+            50% { text-shadow: 0px 0px 20px cyan; }
+            100% { text-shadow: 0px 0px 10px cyan; }
+        }
+
+        .clock {
+            animation: glow 1.5s infinite alternate;
+        }
+
+        /* Floating Menu */
+        .menu-button {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .floating-menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 200px;
+            height: 100vh;
+            background: #333;
+            padding: 20px;
+            transition: left 0.3s;
+        }
+
+        .floating-menu.active {
+            left: 0;
+        }
+
+        .floating-menu a {
+            display: block;
+            padding: 10px;
+            background: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .close-menu {
+            background: red;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tombol Floating Menu -->
+    <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+    <!-- Floating Menu -->
+    <div class="floating-menu" id="floatingMenu">
+        <button class="close-menu" onclick="toggleMenu()">Tutup</button>
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Info Web</a>
+        <a href="#">Web Lainnya</a>
+    </div>
+
+    <!-- Jam Digital -->
+    <div class="clock-container">
+        <div id="clock" class="clock">00:00:00</div>
+        <div id="date" class="date">Loading...</div>
+    </div>
+
+    <script>
+        function updateClock() {
+            let now = new Date();
+            let hours = String(now.getHours()).padStart(2, '0');
+            let minutes = String(now.getMinutes()).padStart(2, '0');
+            let seconds = String(now.getSeconds()).padStart(2, '0');
+
+            let day = now.getDate();
+            let month = now.toLocaleString('id', { month: 'long' });
+            let year = now.getFullYear();
+
+            document.getElementById("clock").textContent = `${hours}:${minutes}:${seconds}`;
+            document.getElementById("date").textContent = `${day} ${month} ${year}`;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock(); // Memanggil fungsi pertama kali agar tidak ada delay
+
+        function toggleMenu() {
+            let menu = document.getElementById("floatingMenu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

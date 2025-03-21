@@ -32,7 +32,7 @@
         .menu-button {
             position: absolute;
             top: 10px;
-            right: 15px;
+            left: 15px; /* Pindah ke kiri */
             background: none;
             border: none;
             font-size: 24px;
@@ -44,16 +44,16 @@
         .floating-menu {
             position: fixed;
             top: 0;
-            right: -250px;
+            left: -250px; /* Pindah ke kiri */
             width: 200px;
             height: 100vh;
             background: #333;
             padding: 20px;
-            transition: right 0.3s;
+            transition: left 0.3s;
         }
 
         .floating-menu.active {
-            right: 0;
+            left: 0;
         }
 
         .floating-menu a {
@@ -135,6 +135,7 @@
     <!-- Floating Menu -->
     <div class="floating-menu" id="floatingMenu">
         <button class="close-menu" onclick="toggleMenu()">Tutup</button>
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
     </div>
 
